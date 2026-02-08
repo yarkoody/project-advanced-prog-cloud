@@ -1,5 +1,51 @@
 # Development Changelog
 
+## Entry 007 - Project Configuration
+Date: 2026-02-08 20:27
+Author: Ariel
+
+Added pyproject.toml with pytest, ruff, and black configuration.
+
+---
+
+## Entry 006 - PR Template
+Date: 2026-02-08 20:21
+Author: Ariel
+
+Added pull request template for consistent PR reviews.
+
+---
+
+## Entry 005 - Gitignore
+Date: 2026-02-08 20:21
+Author: Ariel
+
+Added .gitignore to exclude Python cache, venv, IDE files.
+
+---
+
+## Entry 004 - CI Pipeline
+Date: 2026-02-08 20:10
+Author: Ariel
+
+Set up GitHub Actions CI pipeline:
+- Created `.github/workflows/ci.yml` to run tests on every PR
+- Added `tests/test_smoke.py` as initial test
+
+---
+
+## Entry 003 - Folder Structure
+Date: 2026-02-08 19:57
+Author: Ariel
+
+Created project folder hierarchy:
+- `src/` with subdirectories for each layer (domain, services, api, data)
+- `tests/` for test files
+- `data/` for CSV files
+- Added `docs/FOLDER_STRUCTURE.md` with visual overview
+
+---
+
 ## Entry 002 - Branch Creation
 Date: 2026-02-08 19:36
 Author: Ariel
