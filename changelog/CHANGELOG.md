@@ -1,5 +1,15 @@
 # Development Changelog
 
+## Entry 004 - CI Pipeline
+Date: 2026-02-08 20:10
+Author: Ariel
+
+Set up GitHub Actions CI pipeline:
+- Created `.github/workflows/ci.yml` to run tests on every PR
+- Added `tests/test_smoke.py` as initial test
+
+---
+
 ## Entry 003 - Folder Structure
 Date: 2026-02-08 19:57
 Author: Ariel
