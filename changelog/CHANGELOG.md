@@ -1,5 +1,13 @@
 # Development Changelog
 
+## Entry 007 - Project Configuration
+Date: 2026-02-08 20:27
+Author: Ariel
+
+Added pyproject.toml with pytest, ruff, and black configuration.
+
+---
+
 ## Entry 006 - PR Template
 Date: 2026-02-08 20:21
 Author: Ariel
