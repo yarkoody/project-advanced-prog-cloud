@@ -1,0 +1,15 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.coverage
+htmlcov
+.vscode
+.idea
+.DS_Store
+state.json
+data/state.json
+tests/
+docs/
