@@ -1,4 +1,4 @@
-name: Docker
+name: Docker Build
 
 on:
   push:
@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: false
-          tags: vehicle-api:ci
+          tags: vehicle-api:build-ci
