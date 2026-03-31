@@ -2,6 +2,10 @@ name: Deploy to Cloud Run
 
 on:
     workflow_dispatch:
+      inputs:
+        image_tag:
+          description: 'Docker image tag to deploy (e.g., commit SHA from docker-push)'
+          required: true
 
 jobs:
     deploy-cloud-run:
@@ -12,7 +16,7 @@ jobs:
             REGION: us-central1
             REPOSITORY: vehicle-sharing-api
             IMAGE: vehicle-api
-            SERVICE: vehicle-api
+            SERVICE: fleet-api
 
         steps:
             - name: Checkout code
@@ -28,7 +32,7 @@ jobs:
 
             - name: Set image URI
               run: |
-                  echo "IMAGE_URI=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${{ github.sha }}" >> "$GITHUB_ENV"
+                  echo "IMAGE_URI=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${{ github.event.inputs.image_tag }}" >> "$GITHUB_ENV"
 
             - name: Deploy to Cloud Run
               run: |
