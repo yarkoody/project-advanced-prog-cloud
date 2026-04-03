@@ -16,7 +16,7 @@ jobs:
         env:
             PROJECT_ID: ${{ secrets.EDEN_GCP_PROJECT_ID }}
             REGION: us-central1
-            REPOSITORY: vehicle-sharing-api
+            REPOSITORY: fleet-api
             IMAGE: vehicle-api
 
         steps:
