@@ -1,3 +1,4 @@
+# Workflow purpose: build and publish Docker image to Artifact Registry.
 name: Publish Image
 
 on:

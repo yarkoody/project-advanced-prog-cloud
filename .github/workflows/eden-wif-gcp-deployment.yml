@@ -1,3 +1,4 @@
+# Workflow purpose: build and publish image using Workload Identity Federation (WIF).
 name: Publish Image (Eden WIF)
 
 on:

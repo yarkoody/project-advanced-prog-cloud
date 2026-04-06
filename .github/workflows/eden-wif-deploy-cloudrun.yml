@@ -1,3 +1,4 @@
+# Workflow purpose: deploy to Cloud Run using Workload Identity Federation (WIF).
 name: Deploy to Cloud Run (Eden WIF)
 
 on:

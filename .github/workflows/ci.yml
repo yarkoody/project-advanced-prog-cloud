@@ -1,3 +1,4 @@
+# Workflow purpose: run CI checks (lint + tests) for pull requests and main.
 name: CI
 
 on:

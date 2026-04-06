@@ -1,12 +1,17 @@
-# Vehicle Sharing API — Advanced Programming Final Project
+# Vehicle Sharing API — Advanced Programming Final Project + Cloud Deployment Extension
 
 A backend system for a vehicle-sharing service, implementing ride lifecycle management including user registration, ride handling, vehicle allocation, and maintenance flows.
+
+This repository includes the cloud deployment extension: Docker-based packaging, GitHub Actions CI/CD, Google Artifact Registry publishing, and Cloud Run deployment.
 
 ## Tech Stack
 - Python 3.12
 - FastAPI
 - Pytest
-- GitHub Actions (CI)
+- Docker
+- GitHub Actions (CI/CD)
+- Google Artifact Registry
+- Google Cloud Run
 - Jira for planning and traceability
 
 ## Repository Structure
@@ -118,3 +123,30 @@ Definition of IN REVIEW:
 Definition of DONE:
 - PR merged to main
 - CI green on main
+
+## Cloud Extension Workflow
+
+The cloud extension is implemented as a multi-stage CI/CD flow:
+
+1. Validate image build
+  - Workflow: `.github/workflows/docker-validate.yml`
+  - Purpose: verify Docker image build succeeds
+
+2. Publish image to Artifact Registry
+  - Workflow: `.github/workflows/image-publish.yml`
+  - Purpose: build and push image to GCP Artifact Registry
+
+3. Deploy image to Cloud Run
+  - Workflow: `.github/workflows/cloudrun-deploy.yml`
+  - Purpose: deploy a chosen image tag to Cloud Run
+
+WIF-based alternatives for cloud auth are also provided:
+- `.github/workflows/eden-wif-gcp-deployment.yml`
+- `.github/workflows/eden-wif-deploy-cloudrun.yml`
+
+## Deployment Notes
+
+- Region is set to `us-central1` to stay aligned with course cost guidelines.
+- Sensitive values are passed via GitHub Secrets.
+- Deployment is done to a public Cloud Run service endpoint.
+- API behavior in cloud is expected to match local behavior.

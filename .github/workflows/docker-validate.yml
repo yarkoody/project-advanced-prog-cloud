@@ -1,3 +1,4 @@
+# Workflow purpose: validate Docker image build without pushing artifacts.
 name: Docker Validate
 
 on:
